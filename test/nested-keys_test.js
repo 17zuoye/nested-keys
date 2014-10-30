@@ -23,6 +23,8 @@ exports.NestedKeysTest = {
 
         test.equal(NestedKeys.get(this.obj, ["key_string"]), "val_string");
         test.equal(NestedKeys.get(this.obj, ["key_object_1", "foo"]), "bar");
+        test.equal(NestedKeys.get(this.obj, ["key_array", 0]), "value_array_first");
+        test.equal(NestedKeys.get(this.obj, ["key_array", 1]), undefined);
 
         test.ok(
             _.isEqual(
@@ -41,6 +43,10 @@ exports.NestedKeysTest = {
         test.ok(NestedKeys.del(this.obj, "key_string") == true);
         test.ok(NestedKeys.del(this.obj, "not_exist")  == false);
         test.ok(NestedKeys.del(this.obj, ["not_exist1", "not_exist2"])  == false);
+
+        test.equal(NestedKeys.del(this.obj, ["key_array", 0]), true);
+        test.equal(NestedKeys.del(this.obj, ["key_array", 1]), false);
+
         test.done();
     },
     "set"     : function(test) {
@@ -48,6 +54,9 @@ exports.NestedKeysTest = {
 
         test.ok(NestedKeys.set(this.obj, ["level1", "level2"], "foobar"));
         test.equal(NestedKeys.get(this.obj, ["level1", "level2"]), "foobar");
+
+        test.equal(NestedKeys.set(this.obj, ["key_array", 1], "foobar"), true);
+        test.equal(NestedKeys.get(this.obj, ["key_array", 1]), "foobar");
 
         test.done();
     },

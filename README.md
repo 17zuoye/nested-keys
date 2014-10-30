@@ -25,6 +25,7 @@ var obj = {
 // get.API
 NestedKeys.get(obj, ["key_string"]) // "val_string"
 NestedKeys.get(obj, ["key_object_1", "foo"]) // "bar"
+NestedKeys.get(obj, ["key_array", 0]) // "value_array_first", so does Array index.
 
 // del.API
 NestedKeys.del(obj, "key_string") // true
