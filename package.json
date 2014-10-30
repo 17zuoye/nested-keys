@@ -1,0 +1,24 @@
+{
+  "name"          : "nested-keys",
+  "description"   : "CRUD nested keys on JavaScript object. ",
+  "url"           : "https://github.com/17zuoye/nested-keys",
+  "keywords"      : ["nested", "key", "value", "crud"],
+  "author"        : "David Chen <mvjome@gmail.com>",
+  "dependencies"  : {
+    "underscore"  : ">=1.7.0"
+  },
+  "devDependencies": {
+    "nodeunit"                : ">= 0.9"
+  },
+  "scripts": {
+    "test" : "./node_modules/.bin/nodeunit test",
+    "doc"  : "docco src/nested-keys.js"
+  },
+  "main"          : "lib/nested-keys.js",
+  "version"       : "0.0.1",
+  "license"       : "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/17zuoye/nested-keys.git"
+  }
+}
