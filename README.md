@@ -1,5 +1,7 @@
 nest_keys
 =========
+[![Build Status](https://img.shields.io/travis/17zuoye/nest_keys/master.svg?style=flat)](https://travis-ci.org/17zuoye/nest_keys)
+
 
 CRUD nested keys on JavaScript object.
 
